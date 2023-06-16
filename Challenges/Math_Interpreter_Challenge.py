@@ -10,15 +10,15 @@ while True:
 
     answer = 0
     #Determine the type of operation to carry out. Using if/elif/else statement
-    if operation.endswith("*"):
+    if operation == "*":
         answer = first_number * second_number
-    elif operation.endswith('+'):
+    elif operation == '+':
         answer = first_number + second_number
-    elif operation.endswith('/'):
+    elif operation == '/':
         answer = first_number / second_number
-    elif operation.endswith('-'):
+    elif operation == '-':
         answer = first_number - second_number
-
+    
     #Run the expression and print output formatted to one decimal place
 
     print(f'The answer to the expression {Expression} is {answer}')
