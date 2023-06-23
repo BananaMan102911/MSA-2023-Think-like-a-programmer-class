@@ -6,7 +6,7 @@ list_of_lists = [[2,4,7,9],
 #get data from lists
 print(demo_list[2])
 
-#print the 6 in lists of lists
+#print the 4 in lists of lists
 print(list_of_lists[1][2])
 
 #print all of the values in the list matriz format
