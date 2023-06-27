@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> {% block title %} {% endblock %} Student Application </title>
+        <style>
+            .post{
+                padding: 10px;
+                margin: 5px;
+                background-color: #ddd0d0;
+
+            }
+
+            nav a{
+                color: #096683;
+                font-size: 3em;
+                margin-left: 10px;
+                text-decoration: none;
+            }
+
+            .alert{
+                padding: 10px;
+                margin: 5px;
+                color: #970020;
+                background-color: #ffd5de;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href ="{{url_for('index')}}"> Home </a>
+        </nav>
+        <hr>
+        <div class = "content">
+            
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>
