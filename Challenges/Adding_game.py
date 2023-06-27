@@ -67,7 +67,7 @@ def Question_gen(number_of_questions, level_of_diffuculty):
                     break
                 else:
                     tries -= 1
-                    print(f"That wasn't right? Come on, you can do better...|tries left {tries}")
+                    random_response(tries)
                     if not tries > 0:
                         print(f"The answer to {number1} + {number2} = {number1 + number2}")
                         break
@@ -78,7 +78,27 @@ def Question_gen(number_of_questions, level_of_diffuculty):
                     print(f"The answer to {number1} + {number2} = {number1 + number2} better luck next time...")
                     break
     return correct
-        
+
+def random_response(tries):
+    response = random.randint(1,9)
+    if response == 1:
+       print(f"Seriously, come on that wasn't the right answer... |tries left {tries}") 
+    elif response == 2:
+        print(f"I thought that humans were supposed to be smart...|tries left {tries}")
+    elif response == 3:
+        print(f"That wasn't right? Come on, you can do better...|tries left {tries}")
+    elif response == 4:
+        print(f"You better not miss this again...|tries left {tries}")
+    elif response == 5:
+        print(f"Come on, my little brother can do this math...|tries left {tries}")
+    elif response == 6: 
+        print(f"You might want to choose some easier math...|tries left {tries}")
+    elif response == 7:
+        print(f"That wasn't the right answer, come on you can do better...|tries left {tries}")
+    elif response == 8:
+        print(f"You're a dissapointment...|tries left {tries}")
+    elif response == 9:
+        print(f"You definitely want some more practice...|tries left {tries}")
         
             
 
@@ -97,7 +117,7 @@ def main():
     level_of_diffuculty = Diffuculty()
     number_of_questions = how_many_questions()
     correct = Question_gen(number_of_questions, level_of_diffuculty)
-    print(f"Your grade: {f(correct/number_of_questions) * 100}. If you don't like it, take it again, don't just complain about it...")
+    print(f"Your grade: {((correct/number_of_questions) * 100):.2f}. If you don't like it, take it again, don't just complain about it...")
 
 main()
     
